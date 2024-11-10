@@ -1,9 +1,9 @@
 :root {
-    --primary-color: #333333;
-    --secondary-color: #4a4a4a;
-    --accent-color: #4CAF50;
-    --background-color: #f4f4f4;
-    --text-color: #333;
+    --primary-color: #0a1f44; /* Deep Navy */
+    --secondary-color: #33415c; /* Slate Blue */
+    --accent-color: #f4b400; /* Soft Gold */
+    --background-color: #f8f9fa; /* Soft Off-White */
+    --text-color: #2e2e2e; /* Charcoal Gray */
 }
 
 body {
