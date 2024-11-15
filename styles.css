@@ -93,6 +93,23 @@ nav ul li a {
     font-weight: bold;
 }
 
+/* Bold your name within the publications section */
+#publications ul li strong {
+    font-weight: bold;
+    color: var(--primary-color); /* Optional: make your name the primary color */
+}
+
+/* Add a gray line for the co-author note */
+#publications::after {
+    content: "# denotes co-advisor";
+    color: gray;
+    font-size: 0.9em;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
 h1, h2 {
     color: var(--primary-color);
 }
