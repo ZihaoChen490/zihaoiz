@@ -6,83 +6,6 @@
     <title>Zihao Chen - Academic Website</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            background: url('images/blackboard.jpg') no-repeat center center fixed;
-            background-size: cover;
-        }
-        
-        nav {
-            background-color: rgba(51, 65, 92, 0.8); /* Adding transparency to see the background */
-            padding: 0.5rem 0;
-        }
-        
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-        }
-        
-        nav ul li {
-            margin: 0 10px;
-        }
-        
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.9); /* Add a light background with slight opacity to make text readable */
-            border-radius: 10px;
-        }
-
-        .section {
-            margin-bottom: 40px;
-        }
-
-        h2 {
-            color: #0a1f44;
-        }
-
-        .about-container {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .profile-photo {
-            width: 150px;
-            border-radius: 50%;
-            flex-shrink: 0;
-        }
-
-        .about-text {
-            flex: 1;
-        }
-
-        @media (max-width: 768px) {
-            .about-container {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .about-text {
-                text-align: center;
-            }
-        }
-    </style>
 </head>
 <body>
 
@@ -92,102 +15,160 @@
             <li><a href="#research"><i class="fas fa-flask icon"></i>Research</a></li>
             <li><a href="#publications"><i class="fas fa-book icon"></i>Publications</a></li>
             <li><a href="#experience"><i class="fas fa-briefcase icon"></i>Experience</a></li>
+            <li><a href="#education"><i class="fas fa-graduation-cap icon"></i>Education</a></li>
             <li><a href="#awards"><i class="fas fa-trophy icon"></i>Awards</a></li>
         </ul>
     </nav>
 
     <div class="container">
-        <section id="about-me" class="section">
+        <section id="about-me" class="section about-section">
             <h2><i class="fas fa-user icon"></i>About Me</h2>
             <div class="about-container">
-                <img src="images/file1.jpg" alt="Your Name" class="profile-photo">
+                <img src="images/file1.jpg" alt="Zihao Chen" class="profile-photo">
                 <div class="about-text">
-                    <p>I am a Ph.D. Candidate in Machine Learning at Georgia Institute of Technology, working under the guidance of Dr. Eva Dyer. My research interests include Statistics, Optimization, Time series forecasting, and Computational Biology.</p>
+                    <p>I am a Ph.D. Student in Machine Learning at Georgia Institute of Technology, working under the guidance of Dr. Eva Dyer. My research interests include generative model, contrastive learning, optimal transport, time series forecasting, and computational biology.</p>
                 </div>
             </div>
         </section>
         
+        <div class="education-news-container">
+            <!-- Education Section -->
+            <section id="education" class="section education-section">
+                <h2><i class="fas fa-graduation-cap icon"></i>Education</h2>
+                <div class="education-timeline scrollable">
+                    <div class="education-item">
+                        <h3>Ph.D. in Machine Learning </h3>
+                        <span>Georgia Institute of Technology</span>
+                        <span class="advisor-info">Advised by Eva Dyer</span>
+                    </div>
+                    <div class="education-item">
+                        <h3>M.S. in Engineering </h3>
+                        <span>Fudan University</span>
+                        <span class="advisor-info">Co-Advised by Chunhe Li, Wenlian Lu</spanspan>
+                    </div>
+                    <div class="education-item">
+                        <h3>B.S. in Biology </h3>
+                        <span>Wuhan University</span>
+                        <span class="advisor-info">Advised by Min Wu</span>
+                    </div>
+                </div>
+            </section>
         
+            <section id="news-section" class="news-container">
+                <h2><i class="fas fa-newspaper icon"></i> News</h2>
+                <div class="news-wrapper">
+                    <div class="news-item">
+                        <span class="news-date">Oct 2024</span>
+                        <p class="news-content">
+                            Our theory paper about <a href="https://openreview.net/pdf?id=iNUKoLU8xb" target="_blank" rel="noopener noreferrer">alignment problem in CL</a> has been published on Nuerips 2024.
+                        </p>
+                    </div>
+                    <div class="news-item">
+                        <span class="news-date">Aug 2024</span>
+                        <p class="news-content">
+                            A previous paper of me has been accpeted by the impactful journal about the <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/advs.202404854" target="_blank" rel="noopener noreferrer">dynamics</a>.
+                        </p>
+                    </div>
 
-        <section id="research" class="section">
-            <h2><i class="fas fa-flask icon"></i>Research Interests</h2>
-            <ul>
-                <li>Statistics</li>
-                <li>Optimization</li>
-                <li>Time series forecasting</li>
-                <li>Computational Biology</li>
-            </ul>
-        </section>
-
-        <section id="publications" class="section">
-            <h2><i class="fas fa-book icon"></i> Publications</h2>
-        
-            <h3>Conference:</h3>
-            <p>
-                <strong>Chen Z</strong>, Lin C, Liu R, Xiao J, Dyer E. Your contrastive learning problem is secretly a distribution alignment problem. <em>Advances in Neural Information Processing Systems (NeurIPS)</em>, 2024.
-            </p>
-        
-            <h3>Journal:</h3>
-            <p>
-                <strong>Chen Z</strong>#, Lu J#, Zhao XM, Yu H, Li C. Energy landscape reveals the underlying mechanism of cancer-adipose conversion with gene network models. <em>Advanced Science</em>, 2023.
-            </p>
-            <p>
-                Pillai M#, <strong>Chen Z</strong>#, Jolly M K, Li C. Quantitative landscapes reveal trajectories of cell-state transitions associated with drug resistance in melanoma. <em>iScience</em>, 2022, 105499.
-            </p>
-            <p>
-                <strong>Chen Z</strong>, Li C. Quantifying the Landscape and Transition Paths for Proliferation–Quiescence Fate Decisions. <em>Journal of Clinical Medicine</em>, 2020, 9(8): 2582.
-            </p>
-            <p>
-                Liu J#, <strong>Chen Z</strong>#, Wu Y, Yuan Y, Dai C. Knowledge Distillation to Compress and Generalize Deep Neural Networks for Myoelectric Control. <em>Under review</em>, 2023.
-            </p>
-        </section>
-        
-        
-
-        <section id="experience" class="section">
-            <h2><i class="fas fa-briefcase icon"></i>Experience</h2>
-            <h3>PhD Researcher, Georgia Institute of Technology (Sept 2023–Present)</h3>
-            <p>Project: Generalized contrastive alignment, Advisor: Eva Dyer</p>
-            <ul>
-                <li>Developed a novel class of losses and algorithms for representation learning through generalized contrastive alignment (GCA)</li>
-                <li>Proved convergence of our GCA-based methods which improves the quality of the learned representations</li>
-                <li>Provided connections between unbalanced optimal transport and contrastive learning that allowed for an unbalanced version of GCA that achieves superior performance in downstream classification tasks</li>
-            </ul>
+                    <div class="news-item">
+                        <span class="news-date">Aug 2023</span>
+                        <p class="news-content">
+                            I have started my PhD life in Georgia tech!
+                        </p>
+                    </div>
+                    <div class="news-item">
+                        <span class="news-date">Jan 2023</span>
+                        <p class="news-content">
+                            I have obtained my Master degree in Fudan University!
+                        </p>
+                    </div>
+                </div>
+            </section>
             
-            <h3>MS Researcher, Fudan University (Aug 2021–Jan 2023)</h3>
-            <p>Projects:</p>
-            <ul>
-                <li>Time series predictions of limit cycle based on Neural ODEs</li>
-                <li>Extensions of energy landscape methods on RKHS with optimal transport</li>
-                <li>Study on stochastic dynamics in cell fate decision</li>
-            </ul>
-
-            <h3>Research Intern, Tencent (May 2021–Sept 2021)</h3>
-            <p>Project: Reinforcement learning for user recommendation</p>
-            <ul>
-                <li>Modeled the interaction between users and anchor recommendation system via DDPG</li>
-                <li>Demonstrated significant improvement in click and payment in the initial stage</li>
-                <li>Reduced parameters by about 50% using weight sharing at state and on-policy methods</li>
-            </ul>
-
-            <h3>Researcher Intern, Asymmetric technology (Sept 2022–Nov 2022)</h3>
-            <ul>
-                <li>BTC factors construction based on representation learning method</li>
-                <li>Volatility based machine learning methods for timing selection</li>
-            </ul>
+        </div>
+        
+        <section id="publications" class="section publications-section">
+            <h2><i class="fas fa-book icon"></i> Publications</h2>
+            <div class="publications-container">
+                <!-- Publication 1 -->
+                <div class="publication-item">
+                    <img src="images/thumbnail_2.jpg" alt="Publication 1" class="publication-image specific-image">
+                    <div class="publication-details">
+                        <h3 class="publication-title">Your contrastive learning problem is secretly a distribution alignment problem</h3>
+                        <div class="publication-keywords">
+                            <span class="keyword">Optimal transport</span>
+                            <span class="keyword">Distribution alignment</span>
+                            <span class="keyword">Deep generative model</span>
+                        </div>
+                        <p class="publication-authors">
+                            <strong>Chen Z</strong>, Lin C, Liu R, Xiao J, Dyer E
+                        </p>
+                        <p class="publication-status">
+                            Published in <em>Advances in Neural Information Processing Systems (NeurIPS)</em>, 2024
+                        </p>
+                    </div>
+                </div>
+        
+                <!-- Publication 2 -->
+                <div class="publication-item">
+                    <img src="images/publication2.png" alt="Publication 2" class="publication-image">
+                    <div class="publication-details">
+                        <h3 class="publication-title">Energy landscape reveals the underlying mechanism of cancer-adipose conversion with gene network models</h3>
+                        <div class="publication-keywords">
+                            <span class="keyword">Energy Landscape</span>
+                            <span class="keyword">Stochastic Dynamics</span>
+                        </div>
+                        <p class="publication-authors">
+                            <strong>Chen Z</strong>#, Lu J#, Zhao XM, Yu H, Li C
+                        </p>
+                        <p class="publication-status">
+                            Published in <em>Advanced Science</em>, 2023
+                        </p>
+                    </div>
+                </div>
+        
+                <!-- Publication 3 -->
+                <div class="publication-item">
+                    <img src="images/publication3.png" alt="Publication 3" class="publication-image">
+                    <div class="publication-details">
+                        <h3 class="publication-title">Quantitative landscapes reveal trajectories of cell-state transitions associated with drug resistance in melanoma</h3>
+                        <div class="publication-keywords">
+                            <span class="keyword">Energy Landscape</span>
+                            <span class="keyword">Stochastic Dynamics</span>
+                        </div>
+                        <p class="publication-authors">
+                            Pillai M#, <strong>Chen Z</strong>#, Jolly M K, Li C
+                        </p>
+                        <p class="publication-status">
+                            Published in <em>iScience</em>, 2022, 105499
+                        </p>
+                    </div>
+                </div>
+        
+                <!-- Publication 4 -->
+                <div class="publication-item">
+                    <img src="images/publication4.png" alt="Publication 4" class="publication-image">
+                    <div class="publication-details">
+                        <h3 class="publication-title">Quantifying the Landscape and Transition Paths for Proliferation–Quiescence Fate Decisions</h3>
+                        <div class="publication-keywords">
+                            <span class="keyword">Energy Landscape</span>
+                            <span class="keyword">Stochastic Dynamics</span>
+                        </div>
+                        <p class="publication-authors">
+                            <strong>Chen Z</strong>, Li C
+                        </p>
+                        <p class="publication-status">
+                            Published in <em>Journal of Clinical Medicine</em>, 2020, 9(8): 2582
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
-
-        <section id="awards" class="section">
-            <h2><i class="fas fa-trophy icon"></i>Awards</h2>
-            <ul>
-                <li>Fudan University Outstanding Student Scholarship (2019–2020)</li>
-                <li>Silver Medal, Internationally Genetically Engineered Machine (2017)</li>
-                <li>Wuhan University Outstanding Student Scholarship (2016–2019)</li>
-                <li>First Prize, Wuhan University Undergraduate Academic Research Competition (2016)</li>
-            </ul>
-        </section>
+          
+    
     </div>
 
+    
     <script src="script.js"></script>
 </body>
 </html>
