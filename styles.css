@@ -138,14 +138,29 @@ h1, h2 {
 
 .profile-photo {
     width: 300px; /* Increased width to make the image box larger */
-    height: 300px; /* Increased height accordingly */
+    height: 400px; /* Increased height accordingly */
     border-radius: 50%; /* Keeps the photo a circle */
     flex-shrink: 0; /* Prevents the image from shrinking */
     object-fit: cover; /* Ensures the image fills the container */
     margin-right: 30px; /* Increased space between image and text */
 }
 
+.publication-links {
+    margin-top: 5px;
+}
 
+.publication-links a {
+    display: inline-block;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    margin-right: 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+.publication-links a:hover {
+    color: #0056b3;
+}
 
 /* Education Section Styling */
 .education-section {
@@ -178,7 +193,7 @@ h1, h2 {
 }
 
 .scrollable {
-    max-height: 300px;
+    max-height: 400px;
     overflow-y: auto;
     padding-right: 10px;
 }
@@ -190,7 +205,7 @@ h1, h2 {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-height: 300px; /* Adjust height as needed */
+    max-height: 600px; /* Adjust height as needed */
     overflow-y: auto; /* Enable vertical scrolling */
 }
 
@@ -230,7 +245,7 @@ h1, h2 {
     width: 200px;
     height: 160px;
     border-radius: 5px;
-    object-fit: cover;
+    object-fit: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -238,13 +253,16 @@ h1, h2 {
     width: 200px; /* Adjust only for this image */
     height: 160px;
     border-radius: 5px;
-    object-fit: cover;
+    object-fit: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Publication Details */
 .publication-details {
-    flex: 1; /* Allow details to fill available space */
+    flex: 1; /* Allows the text container to take remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distributes content evenly */
 }
 
 /* Title */
@@ -283,17 +301,32 @@ h1, h2 {
     color: #999;
 }
 
+.marked {
+    position: relative; /* Set relative positioning for absolute child */
+    display: inline-block; /* Ensure the element respects the position */
+    padding-right: 10px; /* Give space for the asterisk */
+}
 
+.marked::after {
+    content: "*"; /* Insert the asterisk */
+    position: absolute; /* Position it relative to .marked */
+    top: -2px; /* Adjust to move above the text */
+    right: 1px; /* Align to the right */
+    font-size: 1em; /* Slightly smaller asterisk */
+    color: inherit; /* Match text color */
+}
 
 @media (max-width: 800px) {
     .publication-item {
-        flex-direction: column; /* Stack image and details vertically */
+        flex-direction: column;
         align-items: center;
+        text-align: center;
     }
 
     .publication-image {
         width: 120px;
         height: 120px;
+        align-self: center; /* Centers the image on small screens */
     }
 
     .publication-details {
