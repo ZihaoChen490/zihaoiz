@@ -164,7 +164,7 @@ h1, h2 {
 
 /* Education Section Styling */
 .education-section {
-    max-width: 400px;
+    max-width: 600px;
 }
 
 .education-timeline {
@@ -193,7 +193,7 @@ h1, h2 {
 }
 
 .scrollable {
-    max-height: 400px;
+    max-height: 600px;
     overflow-y: auto;
     padding-right: 10px;
 }
@@ -205,7 +205,7 @@ h1, h2 {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-height: 600px; /* Adjust height as needed */
+    max-height: 1200px; /* Adjust height as needed */
     overflow-y: auto; /* Enable vertical scrolling */
 }
 
@@ -388,7 +388,7 @@ h1, h2 {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-height: 200px; /* Adjust height as needed */
+    max-height: 400px; /* Adjust height as needed */
     overflow-y: auto; /* Enable vertical scrolling */
 }
 
