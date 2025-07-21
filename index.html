@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zihao Chen - Academic Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <nav>
+    <!-- <nav>
         <ul>
             <li><a href="#home"><i class="fas fa-home icon"></i>Home</a></li>
             <li><a href="#research"><i class="fas fa-flask icon"></i>Research</a></li>
@@ -18,74 +21,128 @@
             <li><a href="#education"><i class="fas fa-graduation-cap icon"></i>Education</a></li>
             <li><a href="#awards"><i class="fas fa-trophy icon"></i>Awards</a></li>
         </ul>
-    </nav>
+    </nav> -->
 
     <div class="container">
-        <section id="about-me" class="section about-section">
+        <!-- Compact Header with Navigation -->
+        <header class="site-header">
+            <div class="header-content">
+                <div class="header-left">
+                    <h1 class="header-name">Zihao Chen</h1>
+                    <div class="header-details">
+                        <span class="header-title">Ph.D. Candidate in Computer Science</span>
+                        <span class="header-separator">•</span>
+                        <span class="header-institution">University of Pennsylvania</span>
+                    </div>
+                </div>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="#about" class="nav-link active">About</a></li>
+                        <li><a href="career.html" class="nav-link">Career</a></li>
+                        <li><a href="#publications" class="nav-link">Publications</a></li>
+                        <li><a href="#cv" class="nav-link">CV</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section id="about" class="section about-section">
             <h2><i class="fas fa-user icon"></i>About Me</h2>
             <div class="about-container">
                 <img src="images/file1.png" alt="Zihao Chen" class="profile-photo">
                 <div class="about-text">
-                    <p>I am a Ph.D. Student in Machine Learning at Georgia Institute of Technology, working with Dr. Eva Dyer. My research interests include deep generative model, contrastive learning, optimal transport, diffusion model and time series forecasting.</p>
+                    <p>I am a third-year Ph.D. student in Computer Science at the University of Pennsylvania, where I work in the Neural Data Science (NerDS) Lab advised by Prof. Eva Dyer. </p>
+                    
+                    <p>My current interests span large language models, diffusion models, representation & contrastive learning in multi-modalities, variational & Monte Carlo techniques, state space and dynamical systems modeling, optimal transport and time-series forecasting (especially neural and wearable biosignals), by the goal of extracting interpretable latent structure.</p>
+                    
+                    <div class="social-links">
+                        <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://scholar.google.com/citations?user=youruserid" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fas fa-graduation-cap"></i>
+                        </a>
+                        <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
         
+        <!-- Education and News Container -->
         <div class="education-news-container">
             <!-- Education Section -->
             <section id="education" class="section education-section">
                 <h2><i class="fas fa-graduation-cap icon"></i>Education</h2>
                 <div class="education-timeline scrollable">
                     <div class="education-item">
-                        <h3>Ph.D. in Machine Learning </h3>
-                        <span>Georgia Institute of Technology</span>
-                        <span class="advisor-info">Advised by Eva Dyer</span>
+                        <h3>Ph.D. in Computer Science</h3>
+                        <span>University of Pennsylvania • 2025 - Present • Eva Dyer</span>
                     </div>
                     <div class="education-item">
-                        <h3>M.S. in Engineering </h3>
-                        <span>Fudan University</span>
-                        <span class="advisor-info">Co-Advised by Chunhe Li, Wenlian Lu</spanspan>
+                        <h3>Ph.D. in Machine Learning</h3>
+                        <span>Georgia Institute of Technology • 2023 - 2025 • Eva Dyer</span>
                     </div>
                     <div class="education-item">
-                        <h3>B.S. in Biology </h3>
-                        <span>Wuhan University</span>
-                        <span class="advisor-info">Advised by Min Wu</span>
+                        <h3>M.S. in Engineering</h3>
+                        <span>Fudan University • 2019 - 2022 • Chunhe Li, Wenlian Lu</span>
+                    </div>
+                    <div class="education-item">
+                        <h3>B.S. in Biology</h3>
+                        <span>Wuhan University • 2015 - 2019 • Min Wu</span>
                     </div>
                 </div>
             </section>
-        
-            <section id="news-section" class="news-container">
-                <h2><i class="fas fa-newspaper icon"></i> News</h2>
+            
+            <!-- News Section -->
+            <section id="news" class="section news-section">
+                <h2><i class="fas fa-newspaper icon"></i>News</h2>
                 <div class="news-wrapper">
                     <div class="news-item">
                         <span class="news-date">Oct 2024</span>
                         <p class="news-content">
-                            Our theory paper about <a href="https://openreview.net/pdf?id=iNUKoLU8xb" target="_blank" rel="noopener noreferrer">alignment problem in CL</a> has been published on Nuerips 2024.
+                            Migrating to UPenn to continue my Ph.D. research with Prof. Eva Dyer.
+                        </p>
+                    </div>
+                    <div class="news-item">
+                        <span class="news-date">Oct 2024</span>
+                        <p class="news-content">
+                            Our theory paper about <a href="https://openreview.net/pdf?id=iNUKoLU8xb" target="_blank" rel="noopener noreferrer">alignment problem in CL</a> has been published on Neurips 2024.
                         </p>
                     </div>
                     <div class="news-item">
                         <span class="news-date">Aug 2024</span>
                         <p class="news-content">
-                            A previous paper of me has been accpeted by the Advanced Science about the <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/advs.202404854" target="_blank" rel="noopener noreferrer">dynamics</a>.
+                            A previous paper of me has been accepted by the Advanced Science about the <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/advs.202404854" target="_blank" rel="noopener noreferrer">dynamics</a>.
                         </p>
                     </div>
-
                     <div class="news-item">
                         <span class="news-date">Aug 2023</span>
                         <p class="news-content">
-                            I have started my PhD life in Georgia tech!
+                            Moved to University of Pennsylvania to continue my Ph.D. research with Prof. Eva Dyer.
                         </p>
                     </div>
                     <div class="news-item">
-                        <span class="news-date">Jan 2023</span>
+                        <span class="news-date">Aug 2021</span>
+                        <p class="news-content">
+                            Started my Ph.D. journey at Georgia Institute of Technology with Prof. Eva Dyer!
+                        </p>
+                    </div>
+                    <div class="news-item">
+                        <span class="news-date">Jan 2021</span>
                         <p class="news-content">
                             I have obtained my Master degree in Fudan University!
                         </p>
                     </div>
                 </div>
             </section>
-            
         </div>
+        
+
         
         <section id="publications" class="section publications-section">
             <h2><i class="fas fa-book icon"></i> Publications</h2>
