@@ -7,10 +7,15 @@ document.addEventListener('DOMContentLoaded', function() {
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
+
+            if (!href) {
+                return;
+            }
             
-            // If it's an external page link (like career.html), don't prevent default
-            if (href.includes('.html')) {
-                return; // Allow normal navigation
+            // Only intercept in-page anchor links like "#about".
+            // Let normal browser navigation handle pages/files such as .html and .pdf.
+            if (!href.startsWith('#')) {
+                return;
             }
             
             // For internal links, prevent default and scroll smoothly
